@@ -2,7 +2,7 @@ import React from "react";
 
 const ReservationMenu=()=>{
     return(
-            <p>This is reservation menu</p>
+            <p>View ALl RESERVATOIN</p>
     )
 }
 

@@ -31,8 +31,8 @@ const OwnerMenu = ({children}) => {
             icon:<FaShoppingBag/>
         },
         {
-            path:"/owner/viewdepartmentbyname",
-            name:"View Dept. by Name",
+            path:"/owner/viewdepartmentbyid",
+            name:"View Dept. by Id",
             icon:<FaShoppingBag/>
         },
         {
@@ -77,7 +77,7 @@ const OwnerMenu = ({children}) => {
                </div>
                {
                    menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassname="active">
+                       <NavLink to={item.path} key={index} className="link" activeclassname="active" style={{ textDecoration:"none"}}>
                            <div className="icon">{item.icon}</div>
                            <div style={{display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
                        </NavLink>

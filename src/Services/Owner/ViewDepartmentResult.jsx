@@ -27,8 +27,8 @@ const ViewDepartmentResult=()=>{
                 <CardText>HOD Phone No. : 9990661578</CardText>
                 
                 <Container className="text-center">
-                    <Button  style={{color: "white" , backgroundColor: "#003333"}}>Update</Button>
-                    <Button className="mx-2" style={{color: "white" , backgroundColor: "#999900"}}>Delete</Button>
+                    <Button className="bt" style={{color: "white" , backgroundColor: "#003333"}}>Update</Button>
+                    <Button className="mx-2 bt" style={{color: "white" , backgroundColor: "#999900"}}>Delete</Button>
                 </Container>
             </CardBody>
         </Card>

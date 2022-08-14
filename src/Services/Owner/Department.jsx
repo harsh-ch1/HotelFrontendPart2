@@ -36,9 +36,10 @@ const Department = ({ department }) => {
    };
  
    return (
-       <Card className="text-center">
+    <div className="div2">
+       <Card className="text-center card2">
            <CardBody>
-               <CardSubtitle className="fw-bold">{department.name}</CardSubtitle>
+               <CardSubtitle className="fw-bold card2">{department.name}</CardSubtitle>
                <br></br>
                <CardText>Department Id : {department.id}</CardText>
                <CardText>Department HOD : {department.hodName}</CardText>
@@ -46,11 +47,12 @@ const Department = ({ department }) => {
                <CardText>Department Size : {department.sizeOfDepartment}</CardText>
  
                <Container className="text-center">
-                   <Button style={{ color: "white", backgroundColor: "#003333" }}><Link className="list-group-item list-group-item-action" tag="a" to={"/owner/viewAll/update/" + department.name}>Update</Link></Button>
-                   <Button className="mx-2" style={{ color: "white", backgroundColor: "#999900" }} onClick={() => { deleteDepartment(department.id); }}>Delete</Button>
+                   <Button className="bt" style={{ color: "white", backgroundColor: "#003333" }}><Link className="list-group-item list-group-item-action" tag="a" to={"/owner/viewAll/update/" + department.name}>Update</Link></Button>
+                   <Button className="mx-2 bt" style={{ color: "white", backgroundColor: "#999900" }} onClick={() => { deleteDepartment(department.id); }}>Delete</Button>
                </Container>
            </CardBody>
        </Card>
+       </div>
    );
  
 };

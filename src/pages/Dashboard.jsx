@@ -1,27 +1,31 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Header from "./Header";
+import hotel1 from "../Images/hotel1.png";
+import hotel2 from "../Images/hotel2.png";
+import hotel3 from "../Images/hotel3.png";
 
 
 const Dashboard=()=>{
     return(
         <div>
-            {/* < Header /> */}
-        <div style={{ display: 'block', padding: 15 }}>
+            < Header />
+        <div style={{ display: 'block'}}>
       
      <Carousel  >
        <Carousel.Item interval={1500}>
          <img 
-           className="d-block w-100 "
-           src="https://wallpaperaccess.com/full/6688225.jpg"     
+           className="d-block w-100 h-500"
+           src={hotel1}     
            alt="Image One"
+           min-height={"500px"}
          />
          
        </Carousel.Item>
        <Carousel.Item interval={500}>
          <img
            className="d-block w-100"
-                src="https://wallpapershome.com/images/pages/ico_h/378.jpg"
+                src={hotel2}
            alt="Image Two"
          />
          
@@ -29,7 +33,7 @@ const Dashboard=()=>{
        <Carousel.Item interval={500}>
          <img
            className="d-block w-100"
-                src="https://cdn.wallpapersafari.com/47/98/GP1K73.jpg"
+                src={hotel3}
            alt="Image Three"
          />
          

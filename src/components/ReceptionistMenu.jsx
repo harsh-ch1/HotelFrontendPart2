@@ -8,9 +8,11 @@ import {
     FaShoppingBag,
     FaThList,
     FaRegBell,
-    FaLogin
+    FaLogin,
+    FaSearch,
+    FaMoneyCheck
 }from "react-icons/fa";
-import{MdLogout}from "react-icons/md";
+import{MdLogout, MdOutlinePersonPin, MdOutlineBookmarks}from "react-icons/md";
 import { NavLink, Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 
@@ -26,31 +28,37 @@ const ReceptionistMenu = ({children}) => {
         },
         
         
+        
         {
             path:"/receptionist/addguest",
             name:"Add Guest",
-            icon:<FaShoppingBag/>
+            icon:<MdOutlinePersonPin/>
         },
         {
             path:"/receptionist/viewguestbyid",
             name:"View Guest By Id",
-            icon:<FaShoppingBag/>
+            icon:<MdOutlinePersonPin/>
         },
         {
             path:"/receptionist/searchroom",
             name:"Search Rooms",
-            icon:<FaShoppingBag/>
+            icon:<FaSearch/>
         },
         
         {
-            path:"/receptionist/reservationmenu",
-            name:"Reservation Menu",
-            icon:<FaUserAlt/>
+            path:"/receptionist/makereservation",
+            name:"Make Reservation",
+            icon:<MdOutlineBookmarks/>
+        },
+        {
+            path:"/receptionist/viewallreservation",
+            name:"View All Reservation",
+            icon:<MdOutlineBookmarks/>
         },
         {
             path:"/receptionist/issuebill",
             name:"Issue Bill",
-            icon:<FaUserAlt/>
+            icon:<FaMoneyCheck/>
         }
         
     ]
@@ -66,7 +74,7 @@ const ReceptionistMenu = ({children}) => {
                </div>
                {
                    menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassname="active">
+                       <NavLink to={item.path} key={index} className="link" activeclassname="active" style={{ textDecoration:"none"}}>
                            <div className="icon">{item.icon}</div>
                            <div style={{display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
                        </NavLink>
@@ -74,7 +82,7 @@ const ReceptionistMenu = ({children}) => {
                }
                <Container className="text-center my-1" >
        
-               <Link  tag="a" to="/logout">
+               <Link  tag="a" to="/login">
            <Button  color="danger" className="my-3 col-4 bt2">
             {/* Logout */}
             <MdLogout style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>

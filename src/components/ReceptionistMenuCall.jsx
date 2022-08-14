@@ -8,11 +8,11 @@ import AddGuest from "../Services/Receptionist/AddGuest";
 import IssueBill from "../Services/Receptionist/IssueBill";
 import IssueBillResult from "../Services/Receptionist/IssueBillResult";
 import Reservation from "../Services/Receptionist/Reservation";
-import ReservationMenu from "../Services/Receptionist/ReservationMenu";
 import SearchRoom from "../Services/Receptionist/SeachRoom";
 import SearchRoomResult from "../Services/Receptionist/SearchRoomResult";
 import ViewGuestById from "../Services/Receptionist/ViewGuestById";
 import ViewGuestResult from "../Services/Receptionist/ViewGuestResult";
+import ViewAllReservation from "../Services/Receptionist/ViewAllReservation";
 
 import ReceptionistMenu from "./ReceptionistMenu";
 
@@ -34,7 +34,8 @@ const ReceptionistMenuCall=()=>{
         <Route path="/searchroom" element={<SearchRoom />} />
         <Route path="/searchroom/result" element={<SearchRoomResult />} />
         <Route path="/searchroom/result/reservation" element={<Reservation />} />
-        <Route path="/reservationmenu" element={<ReservationMenu />} />
+        <Route path="/makereservation" element={<Reservation />} />
+        <Route path="/viewallreservation" element={<ViewAllReservation />} />
         <Route path="/issuebill" element={<IssueBill/>} />
         <Route path="/issuebill/result" element={<IssueBillResult/>} />
               

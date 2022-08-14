@@ -36,7 +36,7 @@ const ViewDepartmentByName=()=>{
 
                 <Container className="text-center my-4">
                     <Button  color="success bt">
-                    <Link className="list-group-item list-group-item-action" tag="a" to="/owner/viewdepartmentbyname/result">Search  </Link>
+                    <Link className="list-group-item list-group-item-action" tag="a" to="/owner/viewdepartmentbyid/result">Search  </Link>
                     </Button>
                 </Container>
                 

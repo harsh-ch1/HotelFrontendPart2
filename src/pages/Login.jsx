@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Container, Form, FormGroup, Input } from "reactstrap";
+import { Button, Card, Container, Form, FormGroup, Input } from "reactstrap";
 import LoginData from "./LoginData";
 import axios from "axios";
 import base_url from "../api/bootapi";
@@ -77,9 +77,15 @@ const Login = () => {
 
     return (
         <div >
-        <div className="Card bgimage" style={{ width: "30rem", margin: "0px auto", boxShadow: "0px 0px 10px 0px grey", borderRadius: "10px" }}>
+        <div  style={{ width: "100%", height:"745px" , backgroundColor:"#99E2EB"}}>
 
-            <h1 className="text-center my-3">Login</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div className="card bgimage" style={{margin: "0px auto",width:"35%",padding:"90px", boxShadow: "0px 0px 10px 0px grey", borderRadius: "10px" }}>
+            <h1 className="text-center">Hotel Management</h1>
+            <h1 className="text-center">Login</h1>
             <Form onSubmit={handleForm} style={{ width: "90%", margin: "0px auto" }}>
                 <FormGroup>
                     <label for="username">Username</label>
@@ -117,6 +123,7 @@ const Login = () => {
                 </Container>
                 <br></br>
             </Form>
+            </div>
             </div>
         </div>
 

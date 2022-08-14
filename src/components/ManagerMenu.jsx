@@ -8,9 +8,11 @@ import {
     FaShoppingBag,
     FaThList,
     FaChild,
-    FaBorderAll
+    FaBorderAll,
+    FaTools
 }from "react-icons/fa";
-import { NavLink } from 'react-router-dom';
+import{MdLogout,MdOutlinePersonPin}from "react-icons/md";
+import { NavLink , Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 
 
@@ -27,17 +29,17 @@ const ManagerMenu = ({children}) => {
         {
             path:"/manager/addinventory",
             name:"Add Inventory",
-            icon:<FaShoppingBag/>
+            icon:<FaTools/>
         },
         {
-            path:"/manager/updateinventory",
-            name:"Update Inventory",
-            icon:<FaShoppingBag/>
+            path:"/manager/viewinventorybyname",
+            name:"View Inventory By Name",
+            icon:<FaTools/>
         },
         {
-            path:"/manager/deleteinventory",
-            name:"Delete Inventory",
-            icon:<FaShoppingBag/>
+            path:"/manager/viewinventory",
+            name:"View All Inventory",
+            icon:<FaTools/>
         },
        
         {
@@ -46,13 +48,13 @@ const ManagerMenu = ({children}) => {
             icon:<FaChild/>
         },
         {
-            path:"/manager/updatestaff",
-            name:"Update Staff",
+            path:"/manager/viewstaffbycode",
+            name:"View Staff By Code",
             icon:<FaChild/>
         },
         {
-            path:"/manager/deletestaff",
-            name:"Delete Staff",
+            path:"/manager/viewstaff",
+            name:"View All Staff",
             icon:<FaChild/>
         },
         
@@ -62,28 +64,23 @@ const ManagerMenu = ({children}) => {
             icon:<FaBorderAll/>
         },
         {
-            path:"/manager/updateroom",
-            name:"Update Room",
+            path:"/manager/viewroombyroomno",
+            name:"View Room By Room no",
             icon:<FaBorderAll/>
         },
         {
-            path:"/manager/deleteroom",
-            name:"Delete Room",
+            path:"/manager/setrates",
+            name:"Set Room Rates",
             icon:<FaBorderAll/>
         },
         
         
-        {
-            path:"/logout",
-            name:"Logout",
-            icon:<FaThList/>
-        }
     ]
     return (
-        <div className="container1">
+        <div className="container1"  >
             
            <div style={{width: isOpen ? "300px" : "50px"}} className="sidebar">
-               <div className="top_section">
+               <div className="top_section" >
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Manager </h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
@@ -91,16 +88,24 @@ const ManagerMenu = ({children}) => {
                </div>
                {
                    menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassname="active" >
+                       <NavLink to={item.path} key={index} className="link" activeclassname="active" style={{textDecoration:"none" }} >
                            <div className="icon">{item.icon}</div>
                            <div style={{display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
                        </NavLink>
                        
                    ))
                }
+               <Container className="text-center my-1" >
+       
+       <Link  tag="a" to="/login">
+   <Button  color="danger" className="my-3 col-4 bt2">
+    {/* Logout */}
+    <MdLogout style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
+    </Button></Link>
+</Container>
                
            </div>
-           <main className='bgimage '>
+           <main className='bgimage ' >
             {children}
             </main>
         </div>

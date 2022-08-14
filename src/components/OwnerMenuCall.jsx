@@ -28,8 +28,8 @@ const OwnerMenuCall=()=>{
         <Route path="/home" element={<Dashboard />}/>
           
         <Route path="/adddepartment" element={<AddDepartment />} />
-        <Route path="/viewdepartmentbyname" element={<ViewDepartmentByName />} />
-        <Route path="/viewdepartmentbyname/result" element={<ViewDepartmentResult />} />
+        <Route path="/viewdepartmentbyid" element={<ViewDepartmentByName />} />
+        <Route path="/viewdepartmentbyid/result" element={<ViewDepartmentResult />} />
         <Route path="/viewall" element={<AllDepartments />} />
 
         <Route path="/adduser" element={<AddUser />} />
