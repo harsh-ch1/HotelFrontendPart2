@@ -23,6 +23,7 @@ main{
     transition: all 0.5s;
     
 }
+
 .top_section{
     display: flex;
     align-items:center;
@@ -72,6 +73,7 @@ main{
     animation: 5s infinite;
     border-radius: 10px;
     padding: 10px;
+    font-weight: bold;
     /* filter:blur(3px); */
     
     
@@ -104,6 +106,9 @@ main{
 
 .bt{
     box-shadow: 2px 2px 2px 2px #235C78;
+}
+.bt2{
+    box-shadow: 2px 1px 3px 0px #000;
 }
 
 .bgimage{

@@ -90,7 +90,7 @@ const OwnerMenu = ({children}) => {
                
                <Container className="text-center my-1" >
                <Link  tag="a" to="/owner/notifications">
-                    <Button  className="col-4" style={{color: "white" , backgroundColor: "#330033"}}>
+                    <Button  className="col-4 bt2" style={{color: "white" , backgroundColor: "#330033"}}>
             {/* Notifications */}
             
                     <FaRegBell style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
@@ -99,7 +99,7 @@ const OwnerMenu = ({children}) => {
             </Link>
             <br></br>
             <Link  tag="a" to="/logout">
-           <Button  color="danger" className="my-3 col-4">
+           <Button  color="danger" className="my-3 col-4 bt2">
             {/* Logout */}
             <MdLogout style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
             </Button></Link>

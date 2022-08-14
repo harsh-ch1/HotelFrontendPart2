@@ -10,74 +10,52 @@ import {
     FaRegBell,
     FaLogin
 }from "react-icons/fa";
-import { NavLink } from 'react-router-dom';
+import{MdLogout}from "react-icons/md";
+import { NavLink, Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 
 
-const OwnerMenu = ({children}) => {
+const ReceptionistMenu = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/owner/home",
+            path:"/receptionist/home",
             name:"Home",
             icon:<FaTh/>
         },
         
         
         {
-            path:"/owner/adddepartment",
-            name:"Add Department",
+            path:"/receptionist/addguest",
+            name:"Add Guest",
             icon:<FaShoppingBag/>
         },
         {
-            path:"/owner/updatedepartment",
-            name:"Update Department",
+            path:"/receptionist/viewguestbyid",
+            name:"View Guest By Id",
             icon:<FaShoppingBag/>
         },
         {
-            path:"/owner/deletedepartment",
-            name:"Delete Department",
+            path:"/receptionist/searchroom",
+            name:"Search Rooms",
             icon:<FaShoppingBag/>
         },
         
         {
-            path:"/owner/adduser",
-            name:"Add User",
+            path:"/receptionist/reservationmenu",
+            name:"Reservation Menu",
             icon:<FaUserAlt/>
         },
         {
-            path:"/owner/updateuser",
-            name:"Update User",
+            path:"/receptionist/issuebill",
+            name:"Issue Bill",
             icon:<FaUserAlt/>
-        },
-        {
-            path:"/owner/deleteuser",
-            name:"Delete User",
-            icon:<FaUserAlt/>
-        },
-        
-        {
-            path:"/owner/retrievereport",
-            name:"Retrieve Report",
-            icon:<FaRegChartBar/>
-        },
-        
-        
-        {
-            path:"/owner/notifications",
-            name:"Notifications",
-            icon:<FaThList/>
-        },
-        
-        {
-            path:"/logout",
-            name:"Logout",
-            icon:<FaThList/>
         }
+        
     ]
     return (
-        <div className="container1">
+        <div className="container1 recepbar" >
             
            <div style={{width: isOpen ? "300px" : "50px"}} className="sidebar">
                <div className="top_section">
@@ -96,12 +74,11 @@ const OwnerMenu = ({children}) => {
                }
                <Container className="text-center my-1" >
        
-           <Button  className="col-4" style={{color: "white" , backgroundColor: "#330033"}}>
-            {/* Notifications */}
-            <FaRegBell />
-            </Button><br></br>
-           
-           <Button  color="danger" className="my-3 col-4">Logout</Button>
+               <Link  tag="a" to="/logout">
+           <Button  color="danger" className="my-3 col-4 bt2">
+            {/* Logout */}
+            <MdLogout style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
+            </Button></Link>
        </Container>
                
            </div>
@@ -112,4 +89,4 @@ const OwnerMenu = ({children}) => {
     );
 };
 
-export default OwnerMenu;
+export default ReceptionistMenu;
