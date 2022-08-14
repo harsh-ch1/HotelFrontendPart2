@@ -3,11 +3,11 @@ import { BrowserRouter , Route, Routes } from "react-router-dom";
 
 import Dashboard from "../pages/Dashboard";
 
-import AddDepartment from "../pages/AddDepartment";
+import AddDepartment from "../Services/Owner/AddDepartment";
 
 
 import ManagerMenu from "./ManagerMenu";
-import AddInventory from "../pages/AddInventory";
+import AddInventory from "../Services/Manager/AddInventory";
 
 
 

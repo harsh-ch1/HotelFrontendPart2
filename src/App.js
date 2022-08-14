@@ -6,6 +6,7 @@ import ManagerMenuCall from './components/ManagerMenuCall';
 import ReceptionistMenuCall from './components/ReceptionistMenuCall';
 import Dashboard from './pages/Dashboard';
 import OwnerMenu from './components/OnwerMenu';
+import Login from './pages/Login';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
 
         <Routes>
+          <Route path='/login'  element={<Login /> } exact/>
       <Route path='/owner/*' element={< OwnerMenuCall/>} />
       
       <Route path='/manager/*' element={< ManagerMenuCall/>} />

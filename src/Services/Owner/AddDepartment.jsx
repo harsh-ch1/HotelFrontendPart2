@@ -1,6 +1,6 @@
 import React, { useState, handleClick, useStyles } from "react";
 import { Link } from "react-router-dom";
-import Header from './Header';
+import Header from '../../pages/Header';
 
 import { Button, Container, Form, FormGroup, Input} from "reactstrap";
 
@@ -11,8 +11,8 @@ const AddDepartment=()=>{
     return (
         <div >
             < Header />
-            <br></br>
-            <div style={{width:"80%",paddingLeft:"320px"}}>
+            
+            <div className="div2">
             <h1 className="text-center my-3" style={{Color:"#001547"}}>Fill Department Details</h1>
 
             <Form className="form">
@@ -64,12 +64,12 @@ const AddDepartment=()=>{
                 </UncontrolledAlert> */}
 
                 <Container className="text-center">
-                    <Button color="success">
+                    <Button color="success" className="bt">
                         Submit
                         
                     </Button>
-                    <Link className="button" tag="a" to="/adddepartment">
-                    <Button color="dark " style={{margin:8}}>clear</Button></Link>
+                    <Link className="button " tag="a" to="/adddepartment">
+                    <Button color="dark " className="bt" style={{margin:8}}>clear</Button></Link>
                 </Container>
             </Form>
             </div>

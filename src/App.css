@@ -74,8 +74,36 @@ main{
     padding: 10px;
     /* filter:blur(3px); */
     
+    
 
     
+}
+.card2{
+    box-shadow: 2px 2px 2px 2px #235C78;
+    animation: 5s infinite;
+    border-radius: 10px;
+    padding: 10px;
+    
+    /* filter:blur(3px); */
+    
+    
+
+    
+}
+
+.div2{
+    width: 80%;
+    margin-top: 10px;
+    padding-left: 320px;
+}
+.carddiv{
+    width: 65%;
+    margin-top: 10px;
+    padding-left: 440px;
+}
+
+.bt{
+    box-shadow: 2px 2px 2px 2px #235C78;
 }
 
 .bgimage{

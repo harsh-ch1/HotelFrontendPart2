@@ -10,6 +10,7 @@ import {
     FaRegBell,
     FaLogin
 }from "react-icons/fa";
+import{MdLogout}from "react-icons/md";
 import { Link, NavLink } from 'react-router-dom';
 import { Button, Container } from 'reactstrap';
 
@@ -30,13 +31,13 @@ const OwnerMenu = ({children}) => {
             icon:<FaShoppingBag/>
         },
         {
-            path:"/owner/updatedepartment",
-            name:"Update Department",
+            path:"/owner/viewdepartmentbyname",
+            name:"View Dept. by Name",
             icon:<FaShoppingBag/>
         },
         {
-            path:"/owner/deletedepartment",
-            name:"Delete Department",
+            path:"/owner/viewall",
+            name:"View All Dept.",
             icon:<FaShoppingBag/>
         },
         
@@ -63,17 +64,6 @@ const OwnerMenu = ({children}) => {
         },
         
        
-        {
-            path:"/owner/notifications",
-            name:"Notifications",
-            icon:<FaThList/>
-        },
-        
-        {
-            path:"/logout",
-            name:"Logout",
-            icon:<FaThList/>
-        }
     ]
     return (
         <div className="container1">
@@ -94,15 +84,27 @@ const OwnerMenu = ({children}) => {
                     
                    ))
                }
+               <br></br>
+               <br></br>
+               <br></br>
+               
                <Container className="text-center my-1" >
-       
-           <Button  className="col-4" style={{color: "white" , backgroundColor: "#330033"}}>
+               <Link  tag="a" to="/owner/notifications">
+                    <Button  className="col-4" style={{color: "white" , backgroundColor: "#330033"}}>
             {/* Notifications */}
-            <FaRegBell />
-            </Button><br></br>
-           
-           <Button  color="danger" className="my-3 col-4">Logout</Button>
+            
+                    <FaRegBell style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
+            
+                    </Button>
+            </Link>
+            <br></br>
+            <Link  tag="a" to="/logout">
+           <Button  color="danger" className="my-3 col-4">
+            {/* Logout */}
+            <MdLogout style={{overflow:"auto", width:"100%", float:"none", display:"block"}}/>
+            </Button></Link>
        </Container>
+       
                
            </div>
            <main className='bgimage '>
